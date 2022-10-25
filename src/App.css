@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,51 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+/* =========================================
+Estilo para para la envoltura principal
+============================================*/
+
+/* wrapper: Envoltura principal */
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
 }
+
+.layout-fixed .wrapper .topnavbar-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 121;
+}
+
+.layout-fixed .wrapper .section-container {
+  margin-top: 65px;
+}
+
+body, .wrapper .section-container {
+  background-color: #f5f7fa;
+}
+
+.wrapper, .section-container {
+  transition: margin-left 0.2s cubic-bezier(0.35, 0, 0.25, 1);
+}
+
+/* @media (min-width: 768px) */
+.wrapper .section-container, .wrapper .footer-container {
+  margin-left: 220px;
+}
+
+.wrapper .section-container {
+  position: relative;
+  height: 100%;
+  margin-left: 0;
+  z-index: 111;
+  background-color: #f5f7fa;
+  margin-bottom: 60px !important;
+}
+
