@@ -1,6 +1,7 @@
 import React from "react";
 import './NavBar.css';
 import logo from '../assets/img/logo-1.png'
+import emptyCart from '../assets/img/empty-cart.png'
 
 const NavBar = () => {
   return (
@@ -45,6 +46,24 @@ const NavBar = () => {
             </a>
           </li>
         </ul>
+        <div class=" mr-auto _searchdata_m7g26_132">
+          <form class="d-flex">
+            {/* <input type="text" class="_datalist_m7g26_103" placeholder="...Buscar" list="data"
+              spellcheck="false" data-ms-editor="true" />
+            <button type="submit"
+              class="btn btn-outline-success">
+              <img src="https://i.pinimg.com/736x/b9/67/82/b96782d0ab0ea492dabcf4a0f00698d2.jpg" alt="search" />
+            </button> */}
+            <input type="text" className="nav-search-input" placeholder="Buscar productos, marcas y más"
+              spellcheck="false" data-ms-editor="true" />
+            {/* <button type="submit" className="nav-search-btn">
+              <img className="img-fluid img-nav-logo" src="https://i.pinimg.com/736x/b9/67/82/b96782d0ab0ea492dabcf4a0f00698d2.jpg" alt="search" />
+            </button> */}
+          </form>
+        </div>
+        <a activeclassname="_NavLinkActive_m7g26_32" aria-current="page" class="active" href="/cart">
+          <img className="img-fluid img-nav-logo _cartIMG_m7g26_151" src={emptyCart} alt="cart" />
+        </a>
         <ul className="navbar-nav flex-row">
           <li className="nav-item" >
             <a className="nav-link" title="Home" href="/home">
