@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.layout-fixed {
+  @media (max-width: 1140px) {
+    .aside-toggled, .offsidebar-open {
+      overflow-y: hidden;
+    }
+  }
+}
