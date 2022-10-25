@@ -319,3 +319,67 @@ button.nav-search-btn:focus {
 
 
 
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+    background-color: #FFFFFF;
+}
+
+.dropdown-content a:hover {
+    color: #FFFFFF;
+    background-color: #323660;
+}
+
+
+/* ddfdf */
+.topnavbar .dropdown .dropdown-menu {
+    top: 64px;
+    left: 0;
+    right: auto;
+}
+
+.topnavbar .dropdown .dropdown-menu {
+    position: absolute;
+    margin-top: 0;
+    top: auto;
+    left: 0;
+    right: 0;
+}
+
+/*  */
+.dropdown-menu .dropdown-item {
+    line-height: 1.52857143;
+    padding: 0.1875rem 1.25rem;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}

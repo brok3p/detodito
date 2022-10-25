@@ -24,3 +24,10 @@ code {
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
+
+/* quitar el estilo por defecto de los links */
+a, .link-unstyled {
+  text-decoration: none !important;
+  outline: none !important;
+}
+
