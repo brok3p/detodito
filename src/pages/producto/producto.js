@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Card from "../../components/card";
 import ItemDetailContainer from "../../components/ItemDetailContainer";
 import ContentWrapper from "../../components/Layout/ContentWrapper";
 import './producto.css'
@@ -60,8 +59,7 @@ const Producto = () => {
     } else {
         return (
             <ContentWrapper>
-                {/* <ItemDetailContainer item={producto}></ItemDetailContainer> */}
-                <Card item={producto}></Card>
+                <ItemDetailContainer item={producto}></ItemDetailContainer>
             </ContentWrapper>
         );
     }
