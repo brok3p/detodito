@@ -140,11 +140,11 @@ const NavBar = () => {
       //   }
       // ]
     },
-    {
-      id: 2,
-      text: 'Ofertas',
-      link: '/ofertas',
-    },
+    // {
+    //   id: 2,
+    //   text: 'Ofertas',
+    //   link: '/ofertas',
+    // },
     {
       id: 3,
       text: 'Crear cuenta',
@@ -170,10 +170,10 @@ const NavBar = () => {
         </div>
 
         <div className="navbar-collapse collapse">
-          <NavbarListLeft menu={menu.slice(0, 2)}></NavbarListLeft>
+          <NavbarListLeft menu={menu.slice(0, 1)}></NavbarListLeft>
           <NavSearchInput></NavSearchInput>
           <CartWidget></CartWidget>
-          <NavbarList menu={menu.slice(2, 4)}></NavbarList>
+          <NavbarList menu={menu.slice(1, 4)}></NavbarList>
         </div>
       </nav>
     // </header>

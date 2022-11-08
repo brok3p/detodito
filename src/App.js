@@ -5,6 +5,9 @@ import Home from './pages/home/home';
 import Producto from './pages/producto/producto';
 import Categoria from './pages/categoria/categoria';
 import Base from './components/Layout/Base';
+import Login from './pages/login/login';
+import Registrar from './pages/registrar/registrar';
+import Cart from './pages/cart/cart';
 
 function App() {
   return (
@@ -25,6 +28,9 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/categorias/:id" element={<Categoria />} />
         <Route exact path="/productos/:id" element={<Producto />} />
+        <Route exact path="/ingresar" element={<Login />} />
+        <Route exact path="/registrarse" element={<Registrar />} />
+        <Route exact path="/cart" element={<Cart />} />
       </Routes>
     </Base>
   );

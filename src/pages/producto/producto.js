@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Card from "../../components/card";
 import ItemDetailContainer from "../../components/ItemDetailContainer";
-import ItemListContainer from "../../components/ItemListContainer";
+import ContentWrapper from "../../components/Layout/ContentWrapper";
 import './producto.css'
 
 const Producto = () => {
@@ -58,7 +59,10 @@ const Producto = () => {
         return <div>Loading...</div>;
     } else {
         return (
-            <ItemDetailContainer item={producto}></ItemDetailContainer>
+            <ContentWrapper>
+                {/* <ItemDetailContainer item={producto}></ItemDetailContainer> */}
+                <Card item={producto}></Card>
+            </ContentWrapper>
         );
     }
 }

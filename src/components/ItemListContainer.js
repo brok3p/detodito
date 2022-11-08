@@ -17,7 +17,7 @@ function ItemListContainer(props) {
           {
             props.items.map((producto) => (
               <div className='card bb' key={producto._id}>
-                <div className="card card-body">
+                <div className="card-body">
                 <h3>{producto.title}</h3>
                 <Link to={`/productos/${producto._id}`} >
                 <img className='producto-image' src={producto.pictures[0]} alt={producto.title}></img>

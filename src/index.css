@@ -32,8 +32,14 @@ a, .link-unstyled {
 }
 
 :root {
-  /* --footer-hg: 60px; */
+  --body-bg: #f5f7fa;
+  --content-bg: --body-bg;
+  --footer-hg: 60px;
   --gray-light: #e4eaec;
   --content-padding: 20px;
   --z-index-main-section: 111;
+  --headings-line-height: 1.1;
+  --content-heading-bg:#fafbfc;
+  --content-heading-border:#cfdbe2;
+  --text-muted:#909FA7;
 }
