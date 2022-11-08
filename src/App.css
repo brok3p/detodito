@@ -242,3 +242,31 @@ body, .wrapper .section-container {
   padding-right: 15px;
   padding-left: 15px;
 }
+
+/* boton por defecto */
+.btn-default {
+  background-color: #fff;
+  border: 1px solid #212121;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #212121;
+  cursor: pointer;
+}
+
+.btn-default:hover {
+  background-color: #373149;
+  color: #fff;
+}
+
+.btn-default:disabled {
+  background-color: #ccc;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.mr-1 {
+  margin-right: .25rem!important;
+}

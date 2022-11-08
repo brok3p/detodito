@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import ItemListContainer from "../../components/ItemListContainer"
+import Loader from "../../components/Loader/Loader";
 
 const Home = () => {
     const [error, setError] = useState(null);
@@ -34,7 +35,7 @@ const Home = () => {
     if (error) {
         return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-        return <div>Loading...</div>;
+        return <Loader></Loader>;
     } else {
         return (
             <ItemListContainer items={items}></ItemListContainer>
