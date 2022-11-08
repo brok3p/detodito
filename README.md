@@ -2,9 +2,9 @@
 
 Este proyecto es un e-comerce que se ira desarrollando en el curso de React en CoderHouse.
 
-# Capturas de pantalla
-
-![plot](./src/assets/img/screenshots/Screenshot%202022-10-25%20at%2008.28.27.png)
+# Routing
+En esta entrega se agrega la navegación usando BrowserRouter
+![plot](./src/assets/img/screenshots/routing.gif)
 
 ## Available Scripts
 
