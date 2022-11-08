@@ -31,3 +31,9 @@ a, .link-unstyled {
   outline: none !important;
 }
 
+:root {
+  /* --footer-hg: 60px; */
+  --gray-light: #e4eaec;
+  --content-padding: 20px;
+  --z-index-main-section: 111;
+}

@@ -158,7 +158,7 @@ const NavBar = () => {
   ]
 
   return (
-    <header className="topnavbar-wrapper">
+    // <header className="topnavbar-wrapper">
       <nav className="navbar navbar-expand-lg topnavbar">
         <div className="navbar-header">
           <a className="navbar-brand" href="/">
@@ -176,7 +176,7 @@ const NavBar = () => {
           <NavbarList menu={menu.slice(2, 4)}></NavbarList>
         </div>
       </nav>
-    </header>
+    // </header>
   );
 }
 export default NavBar;
