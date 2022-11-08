@@ -58,7 +58,7 @@ Estilo para para la envoltura principal
 }
 
 .layout-fixed .wrapper .section-container {
-  margin-top: 65px;
+  margin-top: 90px; /* 65px; */
 }
 
 body, .wrapper .section-container {

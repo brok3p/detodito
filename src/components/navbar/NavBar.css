@@ -247,27 +247,6 @@ ol, ul, dl {
 
 
 /* section containeer */
-.layout-fixed .wrapper .section-container {
-    margin-top: 65px;
-}
-body, .wrapper .section-container {
-    background-color: #f5f7fa;
-}
-.wrapper .section-container {
-    transition: margin-left 0.2s cubic-bezier(0.35, 0, 0.25, 1);
-}
-/* @media (min-width: 768px) */
-.wrapper .section-container, .wrapper .footer-container {
-    margin-left: 220px;
-}
-.wrapper .section-container {
-    position: relative;
-    height: 100%;
-    margin-left: 0;
-    z-index: 111;
-    background-color: #f5f7fa;
-    margin-bottom: 60px !important;
-}
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     display: block;
 }

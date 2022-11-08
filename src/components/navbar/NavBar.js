@@ -3,6 +3,7 @@ import './NavBar.css';
 import logo from '../../assets/img/logo-1.png'
 import CartWidget from "./CartGidget";
 import Logo from "../img/Logo";
+import categoriasMock from "../../assets/data/categoriasMock";
 
 
 // #region Componentes funcionales 
@@ -86,53 +87,58 @@ function NavSearchInput() {
 
 const NavBar = () => {
 
+  const categorias = categoriasMock.data.categories.map(item => {
+    return {id: item._id, text: item.name, link: `/categorias/${item._id}`}
+  });
+
   const menu = [
     {
       id: 1,
       text: 'Categorías',
-      link: '/categorias',
-      submenu: [
-        {
-          id: 1,
-          'text': 'Tecnología',
-          'link': '/tercnologias'
-        },
-        {
-          id: 2,
-          'text': 'Vehículos',
-          'link': '/vehiculos'
-        },
-        {
-          id: 3,
-          'text': 'Ropa',
-          'link': '/ropa'
-        },
-        {
-          id: 4,
-          'text': 'Alimentos',
-          'link': '/alimentos'
-        },
-        {
-          id: 5,
-          'text': 'Belleza',
-          'link': '/belleza'
-        },
-        {
-          id: 6,
-          'text': 'Hogar',
-          'link': '/hogar'
-        },
-        {
-          id: 7,
-          'text': 'Detporte',
-          'link': '/deportes'
-        },
-        {
-          id: 8,
-          'text': 'Otros',
-          'link': '/otros'
-        }
-      ]
+      //link: '/categorias',
+      submenu: categorias
+      // submenu: [
+      //   {
+      //     id: 1,
+      //     'text': 'Tecnología',
+      //     'link': '/tercnologias'
+      //   },
+      //   {
+      //     id: 2,
+      //     'text': 'Vehículos',
+      //     'link': '/vehiculos'
+      //   },
+      //   {
+      //     id: 3,
+      //     'text': 'Ropa',
+      //     'link': '/ropa'
+      //   },
+      //   {
+      //     id: 4,
+      //     'text': 'Alimentos',
+      //     'link': '/alimentos'
+      //   },
+      //   {
+      //     id: 5,
+      //     'text': 'Belleza',
+      //     'link': '/belleza'
+      //   },
+      //   {
+      //     id: 6,
+      //     'text': 'Hogar',
+      //     'link': '/hogar'
+      //   },
+      //   {
+      //     id: 7,
+      //     'text': 'Detporte',
+      //     'link': '/deportes'
+      //   },
+      //   {
+      //     id: 8,
+      //     'text': 'Otros',
+      //     'link': '/otros'
+      //   }
+      // ]
     },
     {
       id: 2,
@@ -155,7 +161,7 @@ const NavBar = () => {
     <header className="topnavbar-wrapper">
       <nav className="navbar navbar-expand-lg topnavbar">
         <div className="navbar-header">
-          <a className="navbar-brand" href="#/">
+          <a className="navbar-brand" href="/">
             <div className="brand-logo">
               <Logo className="img-fluid img-nav-logo" src={logo} alt="Logo App"></Logo>
               {/* <span className="text-white">D'todito</span> */}
