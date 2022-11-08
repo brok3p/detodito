@@ -38,6 +38,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .list-item-buttons {
@@ -60,4 +63,57 @@
     padding: 12px;
 
     cursor: pointer;
+}
+
+/* para el detalle */
+.list-group-count {
+    transition: all .6s ease-in-out;
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1.5rem;
+    margin: 10vh auto;
+    background-color: #fff;
+    /* box-shadow: 0 4px 4px #00000040; */
+    box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+    border-radius: 15px;
+}
+
+.list-item-count-group {
+    display: flex;
+    color: #000!important;
+    justify-content: space-around;
+}
+
+.list-item-count-group .list-item-count {
+    display: flex;
+    margin: 0;
+}
+
+.list-item-count button {
+    width: 50px;
+    border-radius: 15px;
+    border: none;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.list-item-button {
+    align-self: flex-end;
+    margin: auto;
+    font-weight: 400;
+    transition: all .5s ease-in-out;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+
+    cursor: pointer;
+}
+
+.list-item-image-detail {
+    height: 450px;
+    width: 450px;
+    margin: auto;
+    object-fit: contain;
 }

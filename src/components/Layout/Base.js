@@ -7,7 +7,7 @@ const Base = props => (
         <section className="section-container">
             { props.children }
         </section>
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
     </div>
 )
 

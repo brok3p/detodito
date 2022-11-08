@@ -211,3 +211,34 @@ body, .wrapper .section-container {
 } */
 /* //End Page main content
 // ----------------------------- */
+
+.row {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col {
+  -webkit-flex-basis: 0;
+  flex-basis: 0;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.grid-example .row>.col, .grid-example .row>[class^=col-] {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  background-color: rgba(241, 242, 243, .15);
+  border: 1px dashed rgba(0, 0, 0, .15);
+}
+
+.col {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}

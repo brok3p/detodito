@@ -43,3 +43,11 @@ a, .link-unstyled {
   --content-heading-border:#cfdbe2;
   --text-muted:#909FA7;
 }
+
+.text-justify  { text-align: justify !important; }
+.text-muted { color: var(--text-muted) !important; }
+.text-left   { text-align: left !important; }
+.text-right  { text-align: right !important; }
+.text-center { text-align: center !important; }
+
+.text-bold   { font-weight: bold !important; }
