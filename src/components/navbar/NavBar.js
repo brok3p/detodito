@@ -4,6 +4,9 @@ import logo from '../../assets/img/logo-1.png'
 import CartWidget from "./CartGidget";
 import Logo from "../img/Logo";
 import categoriasMock from "../../assets/data/categoriasMock";
+import { Badge } from "../Badge/Bagde";
+import { useContext } from "react";
+import { CompraContext } from "../../context/compra.context";
 
 
 // #region Componentes funcionales 
@@ -86,7 +89,6 @@ function NavSearchInput() {
 
 
 const NavBar = () => {
-
   const categorias = categoriasMock.data.categories.map(item => {
     return {id: item._id, text: item.name, link: `/categorias/${item._id}`}
   });
@@ -173,6 +175,7 @@ const NavBar = () => {
           <NavbarListLeft menu={menu.slice(0, 1)}></NavbarListLeft>
           <NavSearchInput></NavSearchInput>
           <CartWidget></CartWidget>
+          <Badge></Badge>
           <NavbarList menu={menu.slice(1, 4)}></NavbarList>
         </div>
       </nav>

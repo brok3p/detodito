@@ -1,6 +1,17 @@
+import { useEffect } from "react";
+import { useContext } from "react";
+import { useState } from "react";
+import { CompraContext } from "../context/compra.context";
 import ItemCount from "./ItemCount";
 
 const ItemDetailContainer = (props) => {
+    const { listaCompra, addProducto } = useContext(CompraContext);
+
+    const addToCart = (cantidad) => {
+        console.log('Agregar al carrito', cantidad, props.item);
+        addProducto(props.item, cantidad);
+    }
+
     return (
         <>
             <div className="text-center">
@@ -18,13 +29,8 @@ const ItemDetailContainer = (props) => {
             </div>
             <div className="list-group-count">
                 <h1>{props.item.price} {props.item.currency}</h1>
-                <ItemCount item={props.item}></ItemCount>
-                <div className="text-muted">
-                    <h2>Stock disponible {props.item.stock.stockTotal}</h2>
-                </div>
-                <div>
-                    <button className="list-item-button">Agregar al carro</button>
-                </div>
+                <ItemCount init={1} stock={props.item.stock} addToCart={addToCart} ></ItemCount>
+                
             </div>
         </>
     )

@@ -270,3 +270,20 @@ body, .wrapper .section-container {
 .mr-1 {
   margin-right: .25rem!important;
 }
+
+/* Tamaño de iconos */
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 2em;
+}
+
+.fa-4x {
+  font-size: 2em;
+}
+
+.fa-5x {
+  font-size: 2em;
+}

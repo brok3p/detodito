@@ -42,9 +42,11 @@ function ItemListContainer(props) {
                   </Link>
                 </div>
                 <div className="list-item-text">
-                  <Link to={`/productos/${producto._id}`} >
-                    <h1>{producto.title}</h1>
-                  </Link>
+                  <h1>
+                    <Link to={`/productos/${producto._id}`} >
+                      {producto.title}
+                    </Link>
+                  </h1>
                   <h2>{producto.price} {producto.currency}</h2>
                 </div>
                 <div className="list-item-buttons">
