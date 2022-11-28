@@ -3,11 +3,7 @@ import './NavBar.css';
 import logo from '../../assets/img/logo-1.png'
 import CartWidget from "./CartGidget";
 import Logo from "../img/Logo";
-import categoriasMock from "../../assets/data/categoriasMock";
 import { Badge } from "../Badge/Bagde";
-import { useContext } from "react";
-import { CompraContext } from "../../context/compra.context";
-import { Link } from "react-router-dom";
 
 
 // #region Componentes funcionales 
