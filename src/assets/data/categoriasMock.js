@@ -1803,6 +1803,4 @@ const categoriasMock = {
         ]
     }
 }
-
-
 export default categoriasMock;

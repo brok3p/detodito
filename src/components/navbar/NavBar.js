@@ -89,17 +89,17 @@ function NavSearchInput() {
 // #endregion
 
 
-const NavBar = () => {
-  const categorias = categoriasMock.data.categories.map(item => {
-    return {id: item._id, text: item.name, link: `/categorias/${item._id}`}
-  });
+const NavBar = ({items}) => {
+  // const categorias = categoriasMock.data.categories.map(item => {
+  //   return {id: item._id, text: item.name, link: `/categorias/${item._id}`}
+  // });
 
   const menu = [
     {
       id: 1,
       text: 'Categorías',
       //link: '/categorias',
-      submenu: categorias
+      submenu: items,
       // submenu: [
       //   {
       //     id: 1,

@@ -1,35 +1,17 @@
 import { useEffect, useState } from "react";
 import ItemListContainer from "../../components/ItemListContainer"
 import Loader from "../../components/Loader/Loader";
-import { collection, getDocs, getFirestore, doc, getDoc, addDoc, setDoc} from 'firebase/firestore';
-import productosMock from '../../assets/data/productos.v2.json';
+// import { collection, getDocs, getFirestore, doc, getDoc, addDoc, setDoc} from 'firebase/firestore';
+// import productosMock from '../../assets/data/productos.v2.json';
 import { productoService } from "../../services/producto.service";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
+// import categoriasMock from "../../assets/data/categoriasMock";
+// import { categoriaService } from "../../services/categoria.service";
 
 const Home = () => {
-    const db = getFirestore();
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
-
-    useEffect(() => {
-        const getProductos = async () => {
-            await productoService.getProductos()
-                .then((snapshot) => {
-                    setIsLoaded(true);
-                    //const productosList = snapshot.docs.map((doc) => ({ ...doc.data() }));
-                    console.log(snapshot);
-                    setItems(snapshot);
-                }, (error) => {
-                    setIsLoaded(true);
-                    setError(error);
-                });
-        };
-
-        getProductos();
-
-        return () => console.log('my effect is destroying');
-    }, []);
 
     // Note: the empty deps array [] means
     // this useEffect will run once
@@ -54,7 +36,26 @@ const Home = () => {
     //                 setError(error);
     //             }
     //         )
-    // }, [])
+    // }, []);
+
+    useEffect(() => {
+        const getProductos = async () => {
+            await productoService.getProductos()
+                .then((snapshot) => {
+                    setIsLoaded(true);
+                    //const productosList = snapshot.docs.map((doc) => ({ ...doc.data() }));
+                    console.log(snapshot);
+                    setItems(snapshot);
+                }, (error) => {
+                    setIsLoaded(true);
+                    setError(error);
+                });
+        };
+
+        getProductos();
+
+        return () => console.log('my effect is destroying');
+    }, []);
 
     
     // const sendOrder = () => {
@@ -66,7 +67,9 @@ const Home = () => {
     //     addDoc(ordersCollection, order).then(({ id }) => setOrderId(id));
     // }
 
-    // Cargar los datos a firestore
+    //#region Cargar datos a firestore
+
+    // Cargar productos 
     // useEffect(() => {
     //     console.log('mock', productosMock.slice(0, 1));
     //     const cargarDatos = () => {
@@ -83,7 +86,23 @@ const Home = () => {
     //     // cargarDatos();
 
     //     return () => console.log('my effect is destroying');
-    // }, [])
+    // }, []);
+
+    // cargar categorias
+    // useEffect(() => {
+    //     // console.log('mock', categoriasMock.data.categories.slice(0, 1));
+    //     const cargarCategorias = () => {
+    //         categoriasMock.data.categories.forEach(async(prod) => {
+    //             await categoriaService.cargarCategorias(prod);
+    //         });
+    //     }
+
+    //     cargarCategorias();
+
+    //     return () => console.log('my effect is destroying');
+    // }, []);
+
+    //#endregion
 
 
     if (error) {

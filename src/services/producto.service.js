@@ -1,6 +1,5 @@
-import { collection, doc, getDoc, getDocs, getFirestore, query, where } from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs, getFirestore, query, setDoc, where } from 'firebase/firestore';
 
-// const db = getFirestore();
 const NOMBRE_COLECCION = 'productos';
 const getCollectionFirestore = () => collection(getFirestore(), NOMBRE_COLECCION);
 
@@ -60,6 +59,15 @@ export const productoService = {
                 }
                 return snapshot.data();
             });
-    }
+    },
+    cargarProductos: async(prod) => {
+        // const productosCol = collection(db, 'productos');
+        // creando un documento con el id autogenerado
+        // addDoc(productosCol, prod).then(({ id }) => console.log('producto agregado', id));
+
+        // crear un documento especificando el id
+        return await setDoc(doc(getFirestore(), NOMBRE_COLECCION, prod._id), prod)
+            .then(({ id }) => console.log('producto agregado', id));
+    },
 
 }
