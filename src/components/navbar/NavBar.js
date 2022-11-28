@@ -7,6 +7,7 @@ import categoriasMock from "../../assets/data/categoriasMock";
 import { Badge } from "../Badge/Bagde";
 import { useContext } from "react";
 import { CompraContext } from "../../context/compra.context";
+import { Link } from "react-router-dom";
 
 
 // #region Componentes funcionales 

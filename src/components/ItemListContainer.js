@@ -10,6 +10,10 @@ function ItemListContainer(props) {
     //const productos = productos;
     // const navigate = useNavigate();
 
+    if (props.items.length < 1) {
+      return  <p>No hay elementos para mostrar</p>;
+    }
+
     const onHandlerAddProduct = () => console.log('add product');
     
     return (

@@ -1,0 +1,31 @@
+#main-error {
+    display: table;
+    width: 90%;
+    height: 100vh;
+    text-align: center;
+    padding-left: 3rem;
+}
+
+.fof {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.fof h4 {
+    color: var(--danger);
+    font-size: 50px;
+    display: inline-block;
+    padding-right: 12px;
+    animation: type .5s alternate infinite;
+}
+
+@keyframes type {
+    from {
+        /* box-shadow: inset -3px 0px 0px #888; */
+        box-shadow: inset -3px 0px 0px var(--danger);
+    }
+
+    to {
+        box-shadow: inset -3px 0px 0px transparent;
+    }
+}

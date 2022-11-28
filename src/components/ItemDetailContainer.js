@@ -7,6 +7,10 @@ import ItemCount from "./ItemCount";
 const ItemDetailContainer = (props) => {
     const { listaCompra, addProducto } = useContext(CompraContext);
 
+    if (!props.item) {
+        return  <p>No hay información para mostrar</p>;
+    }
+
     const addToCart = (cantidad) => {
         console.log('Agregar al carrito', cantidad, props.item);
         addProducto(props.item, cantidad);

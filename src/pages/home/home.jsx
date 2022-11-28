@@ -4,46 +4,15 @@ import Loader from "../../components/Loader/Loader";
 import { collection, getDocs, getFirestore, doc, getDoc, addDoc, setDoc} from 'firebase/firestore';
 import productosMock from '../../assets/data/productos.v2.json';
 import { productoService } from "../../services/producto.service";
+import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 
 const Home = () => {
     const db = getFirestore();
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
-    
-    
-    //how get documents of firebase with fetch in react?
-    // Query to fetch documents where slug field is equal to given SLUG 
-    // const q = query(collection(db, c), where("slug", "==", SLUG))
-    
-    // onSnapshot(q, snap => {
-        //     if (!snap.empty) {
-            //         const data = snap.docs[0].data()
-            //         // snap.docs would be an array with 1 document
-            //         // There could be multiple in case multiple posts have same slug by chance  
-            //         console.log(data)
-    //     } else {
-    //         console.log("No documents found with given slug")
-    //     }
-    // })
 
     useEffect(() => {
-        // const getProductos= async() => {
-        //     const productosCol = collection(db, 'productos');
-        //     // const productoSnapshot = await getDocs(productosCol);
-        //     // const productosList = productoSnapshot.docs.map((doc) => doc.data());
-        //     await getDocs(productosCol).then((snapshot) => {
-        //         // if(snapshot.exists()) {
-        //             const productosList = snapshot.docs.map((doc) => ({...doc.data()}));
-        //             setItems(productosList);
-        //             console.log(productosList);
-        //         // }
-        //     })
-    
-        //     // console.log(productosList);
-        //     // return productosList;
-        // };
-
         const getProductos = async () => {
             await productoService.getProductos()
                 .then((snapshot) => {
@@ -118,7 +87,7 @@ const Home = () => {
 
 
     if (error) {
-        return <div>Error: {error.message}</div>;
+        return  <ErrorMessage message={error.message}></ErrorMessage>;
     } else if (!isLoaded) {
         return <Loader></Loader>;
     } else {
