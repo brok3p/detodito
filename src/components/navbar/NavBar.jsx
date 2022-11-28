@@ -2,7 +2,7 @@ import React from "react";
 import './NavBar.css';
 import logo from '../../assets/img/logo-1.png'
 import CartWidget from "./CartGidget";
-import Logo from "../img/Logo";
+import Logo from "../Imagen/ImagenCss";
 import { Badge } from "../Badge/Bagde";
 
 
@@ -96,54 +96,7 @@ const NavBar = ({items}) => {
       text: 'Categorías',
       //link: '/categorias',
       submenu: items,
-      // submenu: [
-      //   {
-      //     id: 1,
-      //     'text': 'Tecnología',
-      //     'link': '/tercnologias'
-      //   },
-      //   {
-      //     id: 2,
-      //     'text': 'Vehículos',
-      //     'link': '/vehiculos'
-      //   },
-      //   {
-      //     id: 3,
-      //     'text': 'Ropa',
-      //     'link': '/ropa'
-      //   },
-      //   {
-      //     id: 4,
-      //     'text': 'Alimentos',
-      //     'link': '/alimentos'
-      //   },
-      //   {
-      //     id: 5,
-      //     'text': 'Belleza',
-      //     'link': '/belleza'
-      //   },
-      //   {
-      //     id: 6,
-      //     'text': 'Hogar',
-      //     'link': '/hogar'
-      //   },
-      //   {
-      //     id: 7,
-      //     'text': 'Detporte',
-      //     'link': '/deportes'
-      //   },
-      //   {
-      //     id: 8,
-      //     'text': 'Otros',
-      //     'link': '/otros'
-      //   }
-      // ]
     },
-    // {
-    //   id: 2,
-    //   text: 'Ofertas',
-    //   link: '/ofertas',
-    // },
     {
       id: 3,
       text: 'Crear cuenta',
@@ -154,7 +107,7 @@ const NavBar = ({items}) => {
       text: 'Ingresar',
       link: '/ingresar',
     }
-  ]
+  ];
 
   return (
     // <header className="topnavbar-wrapper">

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { categoriaService } from "../../services/categoria.service";
-import NavBar from "../navbar/NavBar"
+import NavBar from "../NavBar/NavBar";
 
 const Header = () => {
     const [categorias, setCategorias] = useState([]);
