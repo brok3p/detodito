@@ -1,10 +1,8 @@
 import React from "react";
 import './NavBar.css';
-import logo from '../../assets/img/logo-1.png'
 import CartWidget from "./CartGidget";
-import Logo from "../Imagen/ImagenCss";
-import { Badge } from "../Badge/Bagde";
 import { Link } from "react-router-dom";
+import NavSearchInput from "./NavSearchInput";
 
 
 // #region Componentes funcionales 
@@ -73,15 +71,6 @@ function NavbarListLeft(props) {
   );
 }
 
-
-function NavSearchInput() {
-  return (
-  <div className="mr-auto">
-    <form className="d-flex">
-      <input type="text" className="nav-search-input" placeholder="Buscar productos, marcas y más" />
-    </form>
-  </div>);
-}
 
 // #endregion
 

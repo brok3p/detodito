@@ -1,8 +1,8 @@
 :root {
+  --theme-color: #F44336;
   --body-bg: #f5f7fa;
   --content-bg: --body-bg;
   --footer-hg: 60px;
-  --gray-light: #e4eaec;
   --content-padding: 20px;
   --z-index-main-section: 111;
   --headings-line-height: 1.1;
@@ -11,6 +11,13 @@
   --text-muted: #909FA7;
 
   /* colors for theme */
+  --gray-darker: #232735;
+  --gray-dark: #3a3f51;
+  --gray: #dde6e9;
+  --gray-light: #e4eaec;
+  --gray-lighter: #edf1f2;
+
+  --white: #FFFFFF;
   /* --blue:    #007bff; */
   --blue: #323660;
   --indigo:  #6610f2;
@@ -31,9 +38,12 @@
   --danger: var(--red);
   --dark:                  #607D8B;
 
+  /* #region tama;o logo */
   --su-base: 1;
   --su-static8: 8px;
   --su8: calc(var(--su-static8) * var(--su-base));
+
+  /* #endregion */
 
 }
 
