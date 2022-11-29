@@ -1,7 +1,8 @@
 :root {
   --theme-color: #F44336;
   --body-bg: #f5f7fa;
-  --content-bg: --body-bg;
+  /* --body-bg:#E4EBF5; */
+  --content-bg: var(--body-bg);
   --footer-hg: 60px;
   --content-padding: 20px;
   --z-index-main-section: 111;
