@@ -4,6 +4,7 @@ import logo from '../../assets/img/logo-1.png'
 import CartWidget from "./CartGidget";
 import Logo from "../Imagen/ImagenCss";
 import { Badge } from "../Badge/Bagde";
+import { Link } from "react-router-dom";
 
 
 // #region Componentes funcionales 
@@ -113,19 +114,26 @@ const NavBar = ({items}) => {
     // <header className="topnavbar-wrapper">
       <nav className="navbar navbar-expand-lg topnavbar">
         <div className="navbar-header">
-          <a className="navbar-brand" href="/">
+          {/* <a className="navbar-brand" href="/">
             <div className="brand-logo">
               <Logo className="img-fluid img-nav-logo" src={logo} alt="Logo App"></Logo>
-              {/* <span className="text-white">D'todito</span> */}
             </div>
-          </a>
+          </a> */}
+          <Link className="s-topbar-logo text-white text-bold" to="/">
+            <div className="logo-icon">
+              <em className="fas fa-boxes fa-2x"></em>
+            </div>
+            <div className="logo-name">
+              <span>de</span>
+              <div className="-flair">todito</div>
+            </div>
+          </Link>
         </div>
 
         <div className="navbar-collapse collapse">
           <NavbarListLeft menu={menu.slice(0, 1)}></NavbarListLeft>
           <NavSearchInput></NavSearchInput>
           <CartWidget></CartWidget>
-          <Badge></Badge>
           <NavbarList menu={menu.slice(1, 4)}></NavbarList>
         </div>
       </nav>

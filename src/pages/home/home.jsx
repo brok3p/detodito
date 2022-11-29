@@ -44,7 +44,7 @@ const Home = () => {
                 .then((snapshot) => {
                     setIsLoaded(true);
                     //const productosList = snapshot.docs.map((doc) => ({ ...doc.data() }));
-                    console.log(snapshot);
+                    console.log('called productos');
                     setItems(snapshot);
                 }, (error) => {
                     setIsLoaded(true);

@@ -362,3 +362,29 @@ button.nav-search-btn:focus {
     background-color: transparent;
     border: 0;
 }
+
+/* Logo */
+/* .s-topbar  */
+.s-topbar-logo {
+    padding: 0 var(--su8);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    }
+
+.logo-icon {
+    /* box-sizing: border-box;
+    padding: 5px 6px 7px 7px;
+    color: black; */
+}
+
+.logo-name {
+    /* margin-left: 8px; */
+    margin-left: 0.25rem!important;
+    width: calc(100% - 40px);
+}
+
+.-flair {
+    display: block;
+}

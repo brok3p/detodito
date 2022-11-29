@@ -28,9 +28,10 @@ export const CompraProvider = ({children}) => {
     const addProducto = (item, cantidad) => {
         setListaCompra(prevList => {
             const nuevosProductos = [...prevList];
-            const existeEnCart = nuevosProductos.findIndex(x => x.id === item.id);
+            const existeEnCart = nuevosProductos.findIndex(x => x._id === item._id);
 
             if (existeEnCart !== -1) {
+                console.log('llega', nuevosProductos[existeEnCart].cantidad + cantidad);
                 nuevosProductos[existeEnCart].cantidad += cantidad;
                 return nuevosProductos;
             };

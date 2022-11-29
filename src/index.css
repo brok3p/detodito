@@ -31,6 +31,10 @@
   --danger: var(--red);
   --dark:                  #607D8B;
 
+  --su-base: 1;
+  --su-static8: 8px;
+  --su8: calc(var(--su-static8) * var(--su-base));
+
 }
 
 body {
