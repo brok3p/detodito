@@ -1,5 +1,7 @@
 // import productos from '../assets/data/productos.json'
+import { useContext } from "react";
 import { /*Navigate, useNavigate,*/ Link } from "react-router-dom";
+import { CompraContext } from "../context/compra.context";
 import './ListGroup/ListGroup.css'
 
 function Button(props) {
@@ -7,6 +9,7 @@ function Button(props) {
   }
 
 function ItemListContainer(props) {
+  const { addProducto } = useContext(CompraContext);
     //const productos = productos;
     // const navigate = useNavigate();
 
@@ -54,7 +57,7 @@ function ItemListContainer(props) {
                   <h2>{producto.price} {producto.currency}</h2>
                 </div>
                 <div className="list-item-buttons">
-                  <Button onClick={onHandlerAddProduct} text="Agregar al carro"></Button>
+                  <Button onClick={() => addProducto(producto)} text="Agregar al carro"></Button>
                 </div>
               </div>
             ))
