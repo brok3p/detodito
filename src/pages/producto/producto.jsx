@@ -66,7 +66,7 @@ const Producto = () => {
     }, [id]); // Sólo se reinscribe si id cambia
 
     if (error) {
-        return  <ErrorMessage message={error.message}></ErrorMessage>;
+        return <ErrorMessage message={error.message}></ErrorMessage>;
     } else if (!isLoaded) {
         return <Loader></Loader>;
     } else {

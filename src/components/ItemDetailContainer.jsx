@@ -1,6 +1,4 @@
-import { useEffect } from "react";
 import { useContext } from "react";
-import { useState } from "react";
 import { CompraContext } from "../context/compra.context";
 import ItemCount from "./ItemCount";
 
