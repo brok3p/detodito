@@ -76,7 +76,7 @@ h2 {
 .cart-card-actions button {
     width: 30px;
     border-radius: 15px;
-    border: none;
+    /* border: none; */
     margin: 0 15px;
 }
 
@@ -269,7 +269,7 @@ h2 {
     .cart-card-actions button {
         width: 30px;
         border-radius: 15px;
-        border: none;
+        /* border: none; */
         margin: 0 10px;
     }
 

@@ -41,7 +41,7 @@ const Cart = () => {
                                         <h1>{e.title}</h1>
                                         <h2>Total: US$ {Math.round(e.price * e.cantidad)}</h2>
                                         <div className="cart-card-actions">
-                                            <button onClick={() => {
+                                            <button className="btn-default" onClick={() => {
                                                 if (e.cantidad > 1) {
                                                     // dispatch(DecreaseCart(e.product))
                                                     addProducto(e, -1)
@@ -53,7 +53,7 @@ const Cart = () => {
                                             }
                                             }>-</button>
                                             <h1>{e.cantidad}</h1>
-                                            <button onClick={() => {
+                                            <button className="btn-default" onClick={() => {
                                                 if (e.stock.stockTotal > e.cantidad) {
                                                     // dispatch(IncreaseCart(e.product))
                                                     addProducto(e)
