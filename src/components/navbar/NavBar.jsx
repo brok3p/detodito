@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import './NavBar.css';
 import CartWidget from "./CartGidget";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import NavSearchInput from "./NavSearchInput";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
@@ -88,6 +88,8 @@ const NavBar = ({items}) => {
   //   return {id: item._id, text: item.name, link: `/categorias/${item._id}`}
   // });
   const { user, logout } = useContext(AuthContext);
+  const navigate = useNavigate();
+  // const [ filter, setFilter] = useState('');
 
   const menu = [
     {
@@ -107,6 +109,16 @@ const NavBar = ({items}) => {
       link: '/ingresar',
     }
   ];
+
+  const handleFilterChange = e => {
+    console.log('filtro', e);
+    if (e !== undefined || e !== '') {
+      navigate(`/search/${e}`);
+    } else {
+      navigate('/');
+    }
+  }
+
 
   return (
     // <header className="topnavbar-wrapper">
@@ -130,29 +142,28 @@ const NavBar = ({items}) => {
 
         <div className="navbar-collapse collapse">
           <NavbarListLeft menu={menu.slice(0, 1)}></NavbarListLeft>
-          <NavSearchInput></NavSearchInput>
+          <NavSearchInput submit={handleFilterChange}></NavSearchInput>
           <CartWidget></CartWidget>
           {/* <NavbarList menu={menu.slice(1, 4)}></NavbarList> */}
-        <ul className="navbar-nav flex-row">
-        {
-          user?.email ? 
-          (<>
-            <li className="nav-item">
-              <NavLink className="nav-link" title={user.nombre} >
-                <span>{user.nombre}</span>
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" title='Salir' onClick={ () => logout() }>
-                <span>Salir</span>
-              </NavLink>
-            </li>
-            </>)
-          :
-          <NavbarList menu={menu.slice(1, 4)}></NavbarList> 
-          
-        }
-        </ul>
+          <ul className="navbar-nav flex-row">
+            {
+              user?.email ?
+                (<>
+                  <li className="nav-item">
+                    <NavLink className="nav-link" title={user.nombre} >
+                      <span>{user.nombre}</span>
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink className="nav-link" title='Salir' onClick={() => logout()}>
+                      <span>Salir</span>
+                    </NavLink>
+                  </li>
+                </>)
+                :
+                <NavbarList menu={menu.slice(1, 4)}></NavbarList>
+            }
+          </ul>
         </div>
       </nav>
     // </header>

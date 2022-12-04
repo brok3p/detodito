@@ -49,6 +49,14 @@ export const productoService = {
                 return snapshot.docs.map((doc) => ({ ...doc.data() }));
             });
     },
+    getProductosByNombre: async (nombre) => {
+        const q = query(getCollectionFirestore(), where("title", ">=", nombre));
+
+        return await getDocs(q)
+            .then((snapshot) => {
+                return snapshot.docs.map((doc) => ({ ...doc.data() }));
+            });
+    },
     getProductoById: async (id) => {
         const productosCol = doc(getFirestore(), NOMBRE_COLECCION, id);
         // obtner un prioducto segun el ejemplo
