@@ -9,6 +9,7 @@ import Login from './pages/login/Login';
 import Registrar from './pages/registrar/registrar';
 import Cart from './pages/cart/Cart';
 import { CompraProvider } from './context/CartContext';
+import { UserProvider } from './context/AuthContext';
 
 function App() {
   return (
@@ -24,18 +25,20 @@ function App() {
     //     </Routes>
     //   </section>
     // </div>
-    <CompraProvider>
-      <Base>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/categorias/:id" element={<Categoria />} />
-          <Route exact path="/productos/:id" element={<Producto />} />
-          <Route exact path="/cart" element={<Cart />} />
-          <Route exact path="/ingresar" element={<Login />} />
-          <Route exact path="/registrarse" element={<Registrar />} />
-        </Routes>
-      </Base>
-    </CompraProvider>
+    <UserProvider>
+      <CompraProvider>
+        <Base>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/categorias/:id" element={<Categoria />} />
+            <Route exact path="/productos/:id" element={<Producto />} />
+            <Route exact path="/cart" element={<Cart />} />
+            <Route exact path="/ingresar" element={<Login />} />
+            <Route exact path="/registrarse" element={<Registrar />} />
+          </Routes>
+        </Base>
+      </CompraProvider>
+    </UserProvider>
   );
 }
 

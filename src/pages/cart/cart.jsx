@@ -1,15 +1,15 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
 import { CartContext } from "../../context/CartContext";
-import './Cart.css'
+import './Cart.css';
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
     const { addProducto, clear, listaCompra, total, removeProducto } = useContext(CartContext);
-    console.log(listaCompra);
-    const list = listaCompra.map((producto) => {
-        console.log(producto);
-        return <li key={producto._id}><span>{producto.title}{producto.cantidad}</span></li>
-    });
+    const { user } = useContext(AuthContext);
+    const navigate = useNavigate();
+    console.log(user);
 
     function handleDelete(e) {
         // dispatch(DeleteFromCart(e))
@@ -75,25 +75,24 @@ const Cart = () => {
                                 <div className='Checkout_total'>
                                     <h1>Total:US$ {Math.ceil(total)}</h1>
                                 </div>
-                                {/* {
-                                    userState?.email_verified === true ?
-                                        null
-                                        :
-                                        <p>Para completar la compra verifica tu correo o inicia sesion</p>
+                                {
+                                    user?.email ? null : <p>Para completar la compra verifica tu correo o inicia sesión</p>
                                 }
                                 {
-                                    userState?.email_verified === true ?
+                                    user?.email ?
                                         <button onClick={() => navigate('/shipping')}>Checkout</button>
                                         :
-                                        <Button variant="secondary" disabled>Checkout</Button>
-                                } */}
+                                        <button>Checkout2</button>
+                                        // <Button variant="secondary" disabled>Checkout</Button>
+                                }
                                 <button onClick={() => clear()}>Borrar carrito</button>
                             </div>
                         </div>
                     ) : (
                         <div className='cart-card-body-empty'>
                             {/* <img src={EmptyCart} alt="emptyCart" /> */}
-                            <h1>Tu carrito está vacío!</h1>
+                            <i className="fas fa-cart-shopping fa-5x"></i>
+                            <h1><em>Tu carrito está vacío!</em></h1>
                             {/* <a onClick={() => navigate("/")}>
                                 <h2>Regresar a la tienda</h2>
                             </a> */}

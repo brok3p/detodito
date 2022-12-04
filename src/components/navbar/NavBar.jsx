@@ -1,8 +1,10 @@
 import React from "react";
 import './NavBar.css';
 import CartWidget from "./CartGidget";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import NavSearchInput from "./NavSearchInput";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 
 
 // #region Componentes funcionales 
@@ -10,9 +12,12 @@ import NavSearchInput from "./NavSearchInput";
  function NavbarListItem(props) {
   return (
     <li className="nav-item">
-      <a className="nav-link" title={props.item.text} href={props.item.link}>
+      {/* <a className="nav-link" title={props.item.text} href={props.item.link}>
         <span>{props.item.text}</span>
-      </a>
+      </a> */}
+      <NavLink className="nav-link" title={props.item.text} to={props.item.link}>
+        <span>{props.item.text}</span>
+      </NavLink>
     </li>
   );
 }
@@ -23,7 +28,10 @@ function SubmenuLink(props) {
   if (submenu?.length > 0) {
     listItems = submenu.map((item) =>
       // Correct! Key should be specified inside the array.
-      <a className="dropdown-item" key={item.id.toString()} href={item.link}>{item.text}</a>
+      // <a className="dropdown-item" key={item.id.toString()} href={item.link}>{item.text}</a>
+      <NavLink className="dropdown-item" key={item.id.toString()} to={item.link}>
+        <span>{item.text}</span>
+      </NavLink>
     );
   }
   return listItems;
@@ -32,9 +40,9 @@ function SubmenuLink(props) {
 function NavbarListItemLeft(props) {
   return (
     <li className="nav-item dropdown">
-      <a className="nav-link dropdown-toggle" title={props.item.text} href={props.item.link}>
+      <NavLink className="nav-link dropdown-toggle" title={props.item.text} to={props.item.link}>
         <span>{props.item.text}</span>
-      </a>
+      </NavLink>
       <div className="dropdown-menu dropdown-content">
         <SubmenuLink submenu={props.item.submenu}></SubmenuLink>
       </div>
@@ -79,6 +87,7 @@ const NavBar = ({items}) => {
   // const categorias = categoriasMock.data.categories.map(item => {
   //   return {id: item._id, text: item.name, link: `/categorias/${item._id}`}
   // });
+  const { user, logout } = useContext(AuthContext);
 
   const menu = [
     {
@@ -123,7 +132,27 @@ const NavBar = ({items}) => {
           <NavbarListLeft menu={menu.slice(0, 1)}></NavbarListLeft>
           <NavSearchInput></NavSearchInput>
           <CartWidget></CartWidget>
-          <NavbarList menu={menu.slice(1, 4)}></NavbarList>
+          {/* <NavbarList menu={menu.slice(1, 4)}></NavbarList> */}
+        <ul className="navbar-nav flex-row">
+        {
+          user?.email ? 
+          (<>
+            <li className="nav-item">
+              <NavLink className="nav-link" title={user.nombre} >
+                <span>{user.nombre}</span>
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" title='Salir' onClick={ () => logout() }>
+                <span>Salir</span>
+              </NavLink>
+            </li>
+            </>)
+          :
+          <NavbarList menu={menu.slice(1, 4)}></NavbarList> 
+          
+        }
+        </ul>
         </div>
       </nav>
     // </header>
