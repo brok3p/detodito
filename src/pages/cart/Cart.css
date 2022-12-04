@@ -1,0 +1,399 @@
+.cart-container {
+    min-height: 70vh;
+}
+
+.cart-card {
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--gray), -0.2rem -0.2rem 0.5rem var(--gray-light);
+    background-color: rgba(255, 255, 255, 0.436);
+    width: 60%;
+    margin: 15vh auto;
+    height: max-content !important;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2vh;
+}
+
+.cart-card h1 {
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+}
+
+.cart-card div {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-card img {
+    width: 250px;
+}
+
+.cart-card-body {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+}
+
+.cart-card-list {
+    width: 75%;
+    margin: auto 0;
+    display: flex;
+}
+
+.cart-card-list-item {
+    margin: 20px 0;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+}
+
+.cart-card-list-item img {
+    height: 100px;
+    width: 100px;
+}
+
+.cart-card-list-item h1 {
+    width: 25%;
+}
+
+.cart-card-list-item h1,
+h2 {
+    text-align: center;
+    align-self: center;
+    align-content: center;
+    font-size: 1rem !important;
+}
+
+.cart-card-actions {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-around !important;
+}
+
+.cart-card-actions button {
+    width: 30px;
+    border-radius: 15px;
+    border: none;
+    margin: 0 15px;
+}
+
+.cart-card-actions h1 {
+    margin: auto;
+    align-items: center;
+}
+
+.EliminarItem {
+    border-radius: 14px;
+    padding: .4rem;
+    /* background-color: red;
+    color: white; */
+    height: fit-content;
+    margin: auto 0;
+}
+
+.cart-card-checkout {
+    text-align: center;
+    width: 20%;
+    justify-content: center;
+    align-self: flex-end;
+}
+
+.cart-card-checkout button {
+    height: 45px;
+    font-size: 1.3rem;
+    margin: 3vh auto;
+    border: none;
+    border-radius: 10px;
+    background-color: #3483FA;
+    color: white;
+    width: 90%;
+}
+
+.cart-card-checkout button:hover {
+    background-color: #7faff8;
+}
+
+.cart-card-checkout button:last-child {
+    margin: 0 auto;
+    width: 80%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-weight: 600;
+}
+
+.cart-card-checkout button:last-child:hover {
+    background-color: rgb(255, 81, 81);
+    color: white;
+}
+
+.Checkout_total {
+    width: auto;
+}
+
+.cart-card-body-empty {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-card-body-empty img {
+    width: 10rem;
+}
+
+.cart-card-body-empty a {
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cart-card-body-empty a h2 {
+    font-size: 2rem !important;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    border-radius: 15px;
+    background-color: rgba(224, 224, 224, 0.813);
+    padding: 10px;
+}
+
+.FavDiv {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0.436);
+    width: 60%;
+    margin: 15vh auto;
+    height: max-content !important;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2vh;
+}
+
+.FavDiv h1 {
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.374);
+    font-size: 2rem;
+}
+
+.FavDiv div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 2rem auto 1rem auto;
+}
+
+.FavDiv div div div a {
+    margin: auto 0;
+}
+
+.AddCartFav {
+    margin: auto 0;
+    height: 45px;
+    font-size: .9rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #3483FA;
+    color: white;
+}
+
+@media screen and (max-width:600px) {
+
+    .cart-card {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        background-color: rgba(255, 255, 255, 0.436);
+        width: 100%;
+        margin: 4rem 0;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2vh;
+    }
+
+    .cart-card div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cart-card img {
+        width: 40px;
+    }
+
+    .cart-card-body {
+        display: flex;
+        flex-direction: column !important;
+    }
+
+    .cart-card-list {
+        margin: auto 0;
+        width: auto;
+        display: flex;
+        width: 100%;
+    }
+
+    .cart-card-list-item {
+        margin: 20px 0;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        align-items: center;
+    }
+
+    .cart-card-list-item img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .cart-card-list-item h1 {
+        width: 100%;
+    }
+
+    .cart-card-list-item h1,
+    h2 {
+        text-align: center;
+        margin: 0;
+        font-size: 1rem !important;
+    }
+
+    .cart-card-actions {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: space-around !important;
+    }
+
+    .cart-card-actions button {
+        width: 30px;
+        border-radius: 15px;
+        border: none;
+        margin: 0 10px;
+    }
+
+    .cart-card-actions h1 {
+        margin: auto;
+        align-items: center;
+    }
+
+    .EliminarItem {
+        border-radius: 14px;
+        padding: .4rem;
+        background-color: red;
+        color: white;
+        height: fit-content;
+        margin: auto 0;
+    }
+
+    .cart-card-checkout {
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+        align-self: center;
+    }
+
+    .cart-card-checkout button {
+        height: auto;
+        font-size: 1.5rem;
+        margin: 3vh auto;
+        border: none;
+        padding: .9rem;
+        border-radius: 20px;
+        background-color: #3483FA;
+        color: white;
+        width: auto;
+    }
+
+    .cart-card-checkout button:hover {
+        background-color: #7faff8;
+    }
+
+    .cart-card-checkout button:last-child {
+        margin: 0 auto;
+        width: auto;
+        font-size: 1.2rem;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        font-weight: 600;
+    }
+
+    .cart-card-checkout button:last-child:hover {
+        background-color: rgb(255, 81, 81);
+        color: white;
+    }
+
+    .Checkout_total {
+        width: auto;
+    }
+
+    .cart-card-body-empty {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cart-card-body-empty img {
+        width: 4rem;
+    }
+
+    .cart-card-body-empty a {
+        color: black;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .cart-card-body-empty a h2 {
+        margin-top: 3rem;
+        font-size: 1rem !important;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        border-radius: 15px;
+        background-color: rgba(224, 224, 224, 0.813);
+        padding: 10px;
+    }
+
+    .FavDiv {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        background-color: rgba(255, 255, 255, 0.436);
+        width: 100%;
+        margin: 15vh auto;
+        height: max-content !important;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2vh;
+    }
+
+    .FavDiv h1 {
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.374);
+        font-size: 2rem;
+    }
+
+    .FavDiv div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 2rem auto 1rem auto;
+    }
+
+    .FavDiv div div div a {
+        margin: auto 0;
+    }
+
+    .AddCartFav {
+        margin: auto 0;
+        height: 45px;
+        font-size: .9rem;
+        border: none;
+        border-radius: 10px;
+        background-color: #3483FA;
+        color: white;
+    }
+
+}

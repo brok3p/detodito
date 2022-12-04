@@ -7,8 +7,8 @@ import Categoria from './pages/categoria/categoria';
 import Base from './components/Layout/Base';
 import Login from './pages/login/login';
 import Registrar from './pages/registrar/registrar';
-import Cart from './pages/cart/cart';
-import { CompraProvider } from './context/compra.context';
+import Cart from './pages/cart/Cart';
+import { CompraProvider } from './context/CartContext';
 
 function App() {
   return (

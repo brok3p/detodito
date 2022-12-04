@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { calcularTotalCompra, _calcularCantidadCompra } from '../utils';
 
-export const CompraContext = createContext({});
+export const CartContext = createContext({});
 
 export const CompraProvider = ({children}) => {
     const compraLocal = JSON.parse(localStorage.getItem('listaCompra')) ?? [];
@@ -63,9 +63,23 @@ export const CompraProvider = ({children}) => {
         return listaCompra.reduce((sum, item) => sum + item.cantidad, 0);
     };
 
+    const getCantidadProducto = (id) => {
+        let cantidad = listaCompra?.find(item => item._id === id)?.cantidad || 0;
+        console.log(cantidad);
+
+        return cantidad;
+    }
+
     return (
-        <CompraContext.Provider value={{listaCompra, total, addProducto, removeProducto, clear, calcularCantidadListaCompra }}>
+        <CartContext.Provider value={{
+            listaCompra,
+            total,
+            addProducto,
+            removeProducto,
+            clear,
+            calcularCantidadListaCompra,
+            getCantidadProducto }}>
             { children }
-        </CompraContext.Provider>
+        </CartContext.Provider>
     );
 }

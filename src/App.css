@@ -246,25 +246,54 @@ body, .wrapper .section-container {
 /* boton por defecto */
 .btn-default {
   background-color: #fff;
-  border: 1px solid #212121;
+  border: 1px solid var(--blue);
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
   font-size: 14px;
   font-weight: bold;
-  color: #212121;
+  color: var(--blue);
   cursor: pointer;
 }
 
 .btn-default:hover {
-  background-color: #373149;
-  color: #fff;
+  background-color: var(--blue);
+  color: var(--white);
 }
 
 .btn-default:disabled {
+  /* background-color: #ccc;
+  color: #fff; */
+  cursor: not-allowed;
+  opacity: .65;
+  filter: alpha(opacity=65);
+  box-shadow: none;
+}
+
+.btn-danger {
+  background-color: #fff;
+  border: 1px solid var(--red);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--red);
+  cursor: pointer;
+}
+
+.btn-danger:hover {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.btn-danger:disabled {
   background-color: #ccc;
   color: #fff;
   cursor: not-allowed;
+  opacity: .65;
+  filter: alpha(opacity=65);
+  box-shadow: none;
 }
 
 .mr-1 {

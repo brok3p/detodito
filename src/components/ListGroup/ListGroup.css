@@ -24,6 +24,10 @@
     padding: 10px;
 }
 
+.list-group:hover {
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--blue), -0.2rem -0.2rem 0.5rem var(--gray-light);
+}
+
 .list-item-img img {
     width: 18vh;
     height: auto;
