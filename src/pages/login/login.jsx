@@ -7,9 +7,13 @@ const Login = () => {
         password: '',
         recordar: false
     });
+    const[email, setEmail] = useState('');
+    const[password, setPassword] = useState('');
+    // const email = useFormInput('');
+    // const password = useFormInput('');
 
     const handleSubmit = (event) => {
-        console.log(model);
+        console.log(email, password);
         event.preventDefault();
     }
 
@@ -21,6 +25,14 @@ const Login = () => {
         setModel({ [name]: value});
 
         console.log(model);
+    }
+
+    const handleEmailChange = (event) => {
+        setEmail(event.target.value);
+    }
+
+    const handlePasswordChange = (event) => {
+        setPassword(event.target.value);
     }
 
     return (
@@ -43,26 +55,39 @@ const Login = () => {
         //     <input type="submit" value="Ingresar" />
         // </form>
 
-        <div class="login-box">
+        <div className="login-box">
             <h2>Iniciar Sesión</h2>
-            <form>
-                <div class="user-box">
-                    <input type="text" name="" required="" />
-                    <label>Username</label>
+            <form onSubmit={handleSubmit}>
+                <div className="user-box">
+                    <input type="text" name="" required="" onChange={handleEmailChange} value={email} />
+                    <label>Correo</label>
                 </div>
-                <div class="user-box">
-                    <input type="password" name="" required="" />
-                    <label>Password</label>
+                <div className="user-box">
+                    <input type="password" name="" required="" onChange={handlePasswordChange} value={password} />
+                    <label>Contraseña</label>
                 </div>
-                <a href="#">
+                <button className="login-button">
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
                     Ingresar
-                </a>
+                </button>
             </form>
         </div>
     );
 }
 export default Login;
+
+const useFormInput = (initialValue) => {
+    const[value, setValue] = useState(initialValue);
+
+    const handleChange = (e) => {
+        setValue(e.target.value);
+    }
+
+    return {
+        value,
+        onChange: handleChange
+    };
+}
