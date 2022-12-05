@@ -12,6 +12,7 @@ import { CompraProvider } from './context/CartContext';
 import { UserProvider } from './context/AuthContext';
 import Buscar from './pages/categoria/buscar';
 import Order from './pages/order/Order';
+// Correccion de nombres de archivos
 
 function App() {
   return (
