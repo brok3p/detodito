@@ -11,6 +11,7 @@ import Cart from './pages/cart/Cart';
 import { CompraProvider } from './context/CartContext';
 import { UserProvider } from './context/AuthContext';
 import Buscar from './pages/categoria/buscar';
+import Order from './pages/order/Order';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
             <Route exact path="/productos/:id" element={<Producto />} />
             <Route exact path="/search/:id" element={<Buscar />} />
             <Route exact path="/cart" element={<Cart />} />
+            <Route exact path="/orders" element={<Order />} />
             <Route exact path="/ingresar" element={<Login />} />
             <Route exact path="/registrarse" element={<Registrar />} />
           </Routes>

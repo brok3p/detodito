@@ -73,19 +73,19 @@ const Cart = () => {
                             </div>
                             <div className='cart-card-checkout'>
                                 <div className='Checkout_total'>
-                                    <h1>Total:US$ {Math.ceil(total)}</h1>
+                                    <h1>Total:US$ <br /> {Math.ceil(total)}</h1>
                                 </div>
                                 {
-                                    user?.email ? null : <p>Para completar la compra verifica tu correo o inicia sesión</p>
+                                    user?.email ? null : <p>Para completar la compra inicia sesión</p>
                                 }
                                 {
                                     user?.email ?
-                                        <button onClick={() => navigate('/shipping')}>Checkout</button>
+                                        <button className="btn-default" onClick={() => navigate('/orders')}>Checkout</button>
                                         :
-                                        <button>Checkout2</button>
+                                        null
                                         // <Button variant="secondary" disabled>Checkout</Button>
                                 }
-                                <button onClick={() => clear()}>Borrar carrito</button>
+                                <button className="EliminarItem btn-danger btn-default" onClick={() => clear()}>Borrar carrito</button>
                             </div>
                         </div>
                     ) : (

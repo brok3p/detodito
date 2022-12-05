@@ -101,7 +101,7 @@ h2 {
     align-self: flex-end;
 }
 
-.cart-card-checkout button {
+/* .cart-card-checkout button {
     height: 45px;
     font-size: 1.3rem;
     margin: 3vh auto;
@@ -114,9 +114,9 @@ h2 {
 
 .cart-card-checkout button:hover {
     background-color: #7faff8;
-}
+} */
 
-.cart-card-checkout button:last-child {
+/* .cart-card-checkout button:last-child {
     margin: 0 auto;
     width: 80%;
     background-color: rgb(0, 0, 0);
@@ -127,7 +127,7 @@ h2 {
 .cart-card-checkout button:last-child:hover {
     background-color: rgb(255, 81, 81);
     color: white;
-}
+} */
 
 .Checkout_total {
     width: auto;
@@ -294,7 +294,7 @@ h2 {
         align-self: center;
     }
 
-    .cart-card-checkout button {
+    /* .cart-card-checkout button {
         height: auto;
         font-size: 1.5rem;
         margin: 3vh auto;
@@ -308,9 +308,9 @@ h2 {
 
     .cart-card-checkout button:hover {
         background-color: #7faff8;
-    }
+    }*/
 
-    .cart-card-checkout button:last-child {
+    /* .cart-card-checkout button:last-child {
         margin: 0 auto;
         width: auto;
         font-size: 1.2rem;
@@ -322,7 +322,7 @@ h2 {
     .cart-card-checkout button:last-child:hover {
         background-color: rgb(255, 81, 81);
         color: white;
-    }
+    }  */
 
     .Checkout_total {
         width: auto;

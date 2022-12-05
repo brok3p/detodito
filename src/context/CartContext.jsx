@@ -70,6 +70,15 @@ export const CompraProvider = ({children}) => {
         return cantidad;
     }
 
+    const getPedido = (user) => {
+        return {
+            cliente: user,
+            pedido: listaCompra,
+            total: total,
+            fecha: new Date(Date.now())
+        }
+    }
+
     return (
         <CartContext.Provider value={{
             listaCompra,
@@ -78,7 +87,8 @@ export const CompraProvider = ({children}) => {
             removeProducto,
             clear,
             calcularCantidadListaCompra,
-            getCantidadProducto }}>
+            getCantidadProducto,
+            getPedido }}>
             { children }
         </CartContext.Provider>
     );
