@@ -4,7 +4,6 @@ const NavSearchInput = ({submit}) => {
     const filter = useFormInput('');
 
     const handleSubmit = async(event) => {
-        console.log('nav', filter.value);
         event.preventDefault();
         submit(filter.value);
     }

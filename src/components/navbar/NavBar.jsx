@@ -111,7 +111,6 @@ const NavBar = ({items}) => {
   ];
 
   const handleFilterChange = e => {
-    console.log('filtro', e);
     if (e !== undefined || e !== '') {
       navigate(`/search/${e}`);
     } else {

@@ -8,17 +8,6 @@ export const usuarioService = {
         // const q1 = query(citiesRef, where("state", "==", "CO"), where("name", "==", "Denver"));
         const q = query(getCollectionFirestore(), where("email", "==", email), where("password", "==", password));
 
-        // onSnapshot(q, snap => {
-        //     if (!snap.empty) {
-        //         const data = snap.docs[0].data()
-        //         // snap.docs would be an array with 1 document
-        //         // There could be multiple in case multiple posts have same slug by chance  
-        //         console.log(data)
-        //     } else {
-        //         console.log("No documents found with given slug")
-        //     }
-        // })
-
         return await getDocs(q)
             .then((snapshot) => {
                 // const data = snapshot.docs[0].data();

@@ -1,6 +1,6 @@
+import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
+
 const Registrar = () => {
-    return (
-        <h1>Registrarse</h1>
-    );
+    return <ErrorMessage message={'Muy pronto estará disponible. Estamos trabando en ello.'}></ErrorMessage>;
 }
 export default Registrar;

@@ -14,8 +14,6 @@ export const CompraProvider = ({children}) => {
         localStorage.setItem('listaCompra', JSON.stringify(listaCompra));
         setTotal(calcularTotalCompra(listaCompra));
         setTotalListaCompra(calcularCantidadListaCompra(listaCompra));
-        console.log('Total', total);
-        console.log('Cantidad', totalListaCompra);
 
         return () => console.log('my effect is destroying');
     }, [listaCompra, total, totalListaCompra,calcularTotalCompra, _calcularCantidadCompra]);
@@ -32,8 +30,6 @@ export const CompraProvider = ({children}) => {
 
             if (existeEnCart !== -1) {
                 const cantidadPrevia = nuevosProductos[existeEnCart].cantidad;
-                console.log('cantidad previa', cantidadPrevia);
-                console.log('cantidad actual', (cantidadPrevia + cantidad));
                 nuevosProductos[existeEnCart].cantidad = cantidadPrevia + cantidad;
                 return nuevosProductos;
             };
@@ -65,7 +61,6 @@ export const CompraProvider = ({children}) => {
 
     const getCantidadProducto = (id) => {
         let cantidad = listaCompra?.find(item => item._id === id)?.cantidad || 0;
-        console.log(cantidad);
 
         return cantidad;
     }

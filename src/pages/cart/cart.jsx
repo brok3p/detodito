@@ -9,21 +9,6 @@ const Cart = () => {
     const { addProducto, clear, listaCompra, total, removeProducto } = useContext(CartContext);
     const { user } = useContext(AuthContext);
     const navigate = useNavigate();
-    console.log(user);
-
-    function handleDelete(e) {
-        // dispatch(DeleteFromCart(e))
-        // toast.error('Item borrado de su carrito', {
-        //     position: "top-right",
-        //     autoClose: 800,
-        //     hideProgressBar: false,
-        //     closeOnClick: true,
-        //     pauseOnHover: true,
-        //     draggable: true,
-        //     progress: undefined,
-        // });
-        console.log('eliminar', e);
-    }
 
     return (
         <div className="cart-container">

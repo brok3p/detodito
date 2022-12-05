@@ -10,7 +10,6 @@ const ItemDetailContainer = (props) => {
     }
 
     const addToCart = (cantidad) => {
-        console.log('Agregar al carrito', cantidad);
         addProducto(props.item, cantidad);
     }
 
