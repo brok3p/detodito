@@ -3,7 +3,7 @@ import { CartContext } from "../context/CartContext";
 import ItemCount from "./ItemCount";
 
 const ItemDetailContainer = (props) => {
-    const { listaCompra, addProducto } = useContext(CartContext);
+    const { addProducto } = useContext(CartContext);
 
     if (!props.item) {
         return  <p>No hay información para mostrar</p>;

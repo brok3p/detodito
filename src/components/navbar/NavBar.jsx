@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import './NavBar.css';
 import CartWidget from "./CartGidget";
 import { Link, NavLink, useNavigate } from "react-router-dom";

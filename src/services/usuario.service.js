@@ -1,4 +1,4 @@
-import { collection, doc, getDoc, getDocs, getFirestore, query, setDoc, where } from 'firebase/firestore';
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 
 const NOMBRE_COLECCION = 'usuarios';
 const getCollectionFirestore = () => collection(getFirestore(), NOMBRE_COLECCION);
