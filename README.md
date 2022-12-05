@@ -1,44 +1,48 @@
 # Proyecto para el curso de React en CoderHouse
 
-Este proyecto es un e-comerce que se ira desarrollando en el curso de React en CoderHouse.
+Este proyecto simula una tienda online básica. Fue desarrollado en el curso de React en CoderHouse.
 
 # Routing
-En esta entrega se agrega la navegación usando BrowserRouter
+El proyecto de tienda online.
 ![plot](./src/assets/img/screenshots/routing.gif)
 
-## Available Scripts
+## Descripción
+Simulación de una tienda online que cuenta con las siguientes características:
 
-In the project directory, you can run:
+- Los usuarios pueden buscar los productos por categorías o nombre.
+- Los usuarios pueden agregar un producto al carrito de compras al hacer click en el botón agregar al carro.
+- Los usuarios pueden hacer click en el nombre de un producto para ver más información, además pueden indicar la cantidad de productos que desean agregar al carrito de compras.
+- En el carrito de compras los usuarios pueden ver el total de su pedido y también pueden aumentar o disminuir la cantidad de un producto.
+- Para realizar un pedido se debe iniciar sesión con el usuario designado para pruebas (oscar@dtdt.com, dt012).
 
-### `npm start`
+## Librerías
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- `Create React App` - Iniciar el proyecto
+- `React Router` - Navegación
+- `Firebase` - Almacenamiento con Firestore
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Scripts
 
-### `npm test`
+- `npm start`
+    Iniciar el proyecto en el entorno de desarrollo.
+- `npm build`
+    Construir el proyecto para producción.
+- `npm test`
+    Iniciar el proyecto y ejecutar las pruebas.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Pre-requisitos
 
-### `npm run build`
+- [Visual Studio Code](https://code.visualstudio.com/) o el editor de texto de tu preferencia.
+- [Node.js](https://nodejs.org) la versión LTS de preferencia.
+- `usuario:` (oscar@dtdt.com, dt012) 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Estructura del proyecto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `src`: Contains all the source code.
+    - `assets`: Contains images and custom fonts. (Product images are stored in Firebase Storage)
+    - `components`: Componentes de la aplicación.
+    - `context`: React context providers.
+    - `pages`: Componentes de las vistas que se muestran.
+    - `services`: Contienen los servicios con Firestore.
+    - `utils`: Funciones de ayuda. 
+- `App.js`: Componente principal.
