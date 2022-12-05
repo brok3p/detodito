@@ -2,9 +2,13 @@
 
 Este proyecto simula una tienda online básica. Fue desarrollado en el curso de React en CoderHouse.
 
-# Routing
+# detodito
 El proyecto de tienda online.
 ![plot](./src/assets/img/screenshots/routing.gif)
+
+## Deploy
+
+[detodito.netlify.app](https://dtodito.netlify.app)
 
 ## Descripción
 Simulación de una tienda online que cuenta con las siguientes características:
