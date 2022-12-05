@@ -46,3 +46,6 @@ Simulación de una tienda online que cuenta con las siguientes características:
     - `services`: Contienen los servicios con Firestore.
     - `utils`: Funciones de ayuda. 
 - `App.js`: Componente principal.
+
+## Final Words
+Fue un curso muy interesante y de mucha ayuda para iniciar en React :)
